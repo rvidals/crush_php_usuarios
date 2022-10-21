@@ -9,12 +9,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <title>Página de Consulta</title>
+
     <head>
-        
+        <title>Página de Consulta</title>
         <link rel="stylesheet" 
         href="https://maxcdn.bootstrapcdn.com/3.4.0/css/bootstrap.min.css">
-        
     </head>
     <body>
 
