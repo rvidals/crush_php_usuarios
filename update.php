@@ -8,7 +8,7 @@
             $email = $_POST['email'];
             $password = $_POST['password'];
             $genero = $_POST['genero'];
-            //$dt_cadastro = $_POST['dt_cadastro'];
+            $dt_cadastro = $_POST['dt_cadastro'];
 
             $sql = "UPDATE `cliente`.`usuarios` SET
                     `primeiro_nome` = '$primeiro_nome',
@@ -16,7 +16,7 @@
                     `email` = '$email',
                     `password` = '$password',
                     `genero` = '$genero',
-                   -- `dt_cadastro` = 'NOW()'
+                   `dt_cadastro` = 'NOW()'
                     WHERE `idusuarios` = '$id'";
 
             $result = $conn->query($sql);
@@ -24,7 +24,7 @@
             if($result == TRUE){
                 echo "Atualizado com sucesso!";
             }else{
-                echo "Erro:".$sql."<br>".$conn->$error;
+                echo "erro:" .$sql."<br>" . $conn->error;
             };
         }
     if(isset($_GET['idusuarios'])){
@@ -41,12 +41,15 @@
                 $password = $row['password'];
                 $genero = $row['genero'];
                 $id = $row['idusuarios'];
+
+                
+
             }
             ?>
 
             <h2>Formulário de Atualização</h2>
 
-            <form action="" method="post">
+            <form action="" method="POST">
 
                 <fieldset>
                     <legend>Informação Pessoal:</legend>
