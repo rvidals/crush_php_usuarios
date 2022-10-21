@@ -8,7 +8,7 @@
             $email = $_POST['email'];
             $password = $_POST['password'];
             $genero = $_POST['genero'];
-            $dt_cadastro = $_POST['dt_cadastro'];
+            //$dt_cadastro = $_POST['dt_cadastro'];
 
             $sql = "UPDATE `cliente`.`usuarios` SET
                     `primeiro_nome` = '$primeiro_nome',
@@ -16,7 +16,7 @@
                     `email` = '$email',
                     `password` = '$password',
                     `genero` = '$genero',
-                    `dt_cadastro` = 'NOW()'
+                   -- `dt_cadastro` = 'NOW()'
                     WHERE `idusuarios` = '$id'";
 
             $result = $conn->query($sql);
